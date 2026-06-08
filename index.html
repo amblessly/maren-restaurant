@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAREN — Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">MAREN</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">Story</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#chefs" class="nav-link">Chefs</a></li>
+        <li><a href="#reserve" class="nav-link nav-cta">Reserve</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <ul class="mobile-links">
+      <li><a href="#about" class="mob-link">Story</a></li>
+      <li><a href="#menu" class="mob-link">Menu</a></li>
+      <li><a href="#chefs" class="mob-link">Chefs</a></li>
+      <li><a href="#reserve" class="mob-link">Reserve a Table</a></li>
+    </ul>
+    <div class="mob-footer-info">
+      <p>+1 (212) 555-0148</p>
+      <p>12 West 57th Street, New York</p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=80"
+        alt="Fine dining"
+        class="hero-img"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-fade">New York · Est. 2019</p>
+      <h1 class="hero-headline reveal-up">
+        Where Every<br /><em>Detail</em> Sings
+      </h1>
+      <p class="hero-sub reveal-up delay-1">A tasting experience unlike any other.<br />Seasonal menus composed like music.</p>
+      <div class="hero-actions reveal-up delay-2">
+        <a href="#reserve" class="btn-primary">Reserve Your Evening</a>
+        <a href="#menu" class="btn-ghost">View Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal-left">
+        <img
+          src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=80"
+          alt="Chef at work"
+          class="about-img"
+        />
+        <div class="about-badge">
+          <span class="badge-num">14</span>
+          <span class="badge-text">Years of<br />Excellence</span>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-heading">Crafted from<br /><em>passion & precision</em></h2>
+        <p class="about-body">
+          MAREN began as a single table in a borrowed kitchen. Today it stands as
+          one of New York's most celebrated tasting destinations — earning two
+          Michelin stars and a reputation built on obsessive sourcing, bold
+          technique, and quiet hospitality.
+        </p>
+        <p class="about-body">
+          Every plate is a conversation between season, soil, and memory.
+          We work with fewer than twenty farms and change our menu entirely
+          with each harvest.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">★★</span>
+            <span class="stat-label">Michelin Stars</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">18</span>
+            <span class="stat-label">Courses</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">20</span>
+            <span class="stat-label">Farm Partners</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Current Season</p>
+        <h2 class="section-heading">The Menu</h2>
+        <p class="section-sub">A curated selection from our autumn tasting.</p>
+      </div>
+      <div class="menu-tabs reveal-up delay-1">
+        <button class="tab active" data-tab="starters">Starters</button>
+        <button class="tab" data-tab="mains">Mains</button>
+        <button class="tab" data-tab="desserts">Desserts</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <!-- JS populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEFS -->
+  <section class="chefs" id="chefs">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">The Brigade</p>
+        <h2 class="section-heading">Meet Our Chefs</h2>
+      </div>
+      <div class="chefs-grid">
+        <div class="chef-card reveal-up">
+          <div class="chef-img-wrap">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80" alt="Executive Chef" />
+            <div class="chef-overlay">
+              <p class="chef-quote">"Simplicity is the hardest dish to master."</p>
+            </div>
+          </div>
+          <div class="chef-info">
+            <h3>Elara Voss</h3>
+            <p>Executive Chef & Founder</p>
+          </div>
+        </div>
+        <div class="chef-card reveal-up delay-1">
+          <div class="chef-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=600&q=80" alt="Sous Chef" />
+            <div class="chef-overlay">
+              <p class="chef-quote">"Fire reveals what cold conceals."</p>
+            </div>
+          </div>
+          <div class="chef-info">
+            <h3>Marcus Ide</h3>
+            <p>Sous Chef</p>
+          </div>
+        </div>
+        <div class="chef-card reveal-up delay-2">
+          <div class="chef-img-wrap">
+            <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80" alt="Pastry Chef" />
+            <div class="chef-overlay">
+              <p class="chef-quote">"Dessert is emotion, baked in."</p>
+            </div>
+          </div>
+          <div class="chef-info">
+            <h3>Nadia Solis</h3>
+            <p>Pastry Chef</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="reserve" id="reserve">
+    <div class="reserve-inner">
+      <div class="reserve-text reveal-left">
+        <p class="section-label light">Reservations</p>
+        <h2 class="section-heading light">Secure Your<br /><em>Evening</em></h2>
+        <p class="reserve-note">
+          We seat two sittings per evening: 6:00 PM and 8:30 PM.
+          The full tasting menu is the only option — a journey of
+          eighteen thoughtful courses.
+        </p>
+        <div class="reserve-contact">
+          <p>+1 (212) 555-0148</p>
+          <p>reservations@marennyc.com</p>
+        </div>
+      </div>
+      <div class="reserve-form-wrap reveal-right">
+        <form class="reserve-form" id="reserveForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Elena" />
+              <span class="field-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Vasquez" />
+              <span class="field-err"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="elena@example.com" />
+            <span class="field-err"></span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rdate">Date</label>
+              <input type="date" id="rdate" name="rdate" />
+              <span class="field-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="rtime">Sitting</label>
+              <select id="rtime" name="rtime">
+                <option value="">Select</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="20:30">8:30 PM</option>
+              </select>
+              <span class="field-err"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <div class="guest-stepper">
+              <button type="button" class="stepper-btn" id="guestMinus">−</button>
+              <span id="guestCount">2</span>
+              <button type="button" class="stepper-btn" id="guestPlus">+</button>
+            </div>
+            <input type="hidden" id="guests" name="guests" value="2" />
+          </div>
+          <button type="submit" class="btn-submit">
+            <span class="btn-text">Confirm Reservation</span>
+            <span class="btn-ripple"></span>
+          </button>
+          <p class="form-success" id="formSuccess">Your reservation is confirmed. We look forward to welcoming you.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">MAREN</span>
+        <p>12 West 57th Street<br />New York, NY 10019</p>
+      </div>
+      <div class="footer-nav">
+        <a href="#about">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#chefs">Chefs</a>
+        <a href="#reserve">Reserve</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter/X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MAREN. All rights reserved.</p>
+      <p>Crafted with intention.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
